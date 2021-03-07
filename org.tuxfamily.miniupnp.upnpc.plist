@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.tuxfamily.miniupnp.upnpc</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/upnpc</string>
+        <string>-r</string>
+        <string>22</string>
+        <string>50122</string>
+        <string>tcp</string>
+    </array>
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    <key>ThrottleInterval</key>
+    <integer>300</integer>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StandardOutPath</key>
+    <string>/tmp/org.tuxfamily.miniupnp.upnpc.stdout</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/org.tuxfamily.miniupnp.upnpc.stderr</string>
+</dict>
+</plist>
