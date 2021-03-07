@@ -4,11 +4,11 @@ A collection of macOS `.plist` files to automate background tasks
 
 These files may be placed into one of three locations, with the following results:
 
-Location                 | When Loaded | For Whom      | Ownership    | Permissions
--------------------------|-------------|---------------|--------------|-------------
-`/Library/LaunchDaemons` | at startup  | everyone      | `root:wheel` | `644`
-`/Library/LaunchAgents`  | at login    | everyone      | `root:wheel` | `644`
-`~/Library/LaunchAgents` | at login    | specific user | `user:staff` | `644`
+Location                 | When Loaded | For Whom      | Ownership    | Permissions | Controlled by
+-------------------------|-------------|---------------|--------------|-------------|------------------
+`/Library/LaunchDaemons` | at startup  | everyone      | `root:wheel` | `644`       | `sudo launchctl`
+`/Library/LaunchAgents`  | at login    | everyone      | `root:wheel` | `644`       | `launchctl`
+`~/Library/LaunchAgents` | at login    | specific user | `user:staff` | `644`       | `launchctl`
 
 See [launchd.info](https://www.launchd.info) for general syntax, but also refer to `man launchd.plist` for the macOS-specific implementation, which is a subset in many respects.
 
