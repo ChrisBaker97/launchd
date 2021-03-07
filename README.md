@@ -22,3 +22,12 @@ Requires the [`miniupnpc`](https://miniupnp.tuxfamily.org) UPnP client, availabl
 ```sh
 $ brew install miniupnpc
 ```
+
+To bring down the UPnP port forwarding, first unload the daemon:
+```sh
+sudo launchctl unload org.tuxfamily.miniupnp.upnpc.plist
+```
+and then remove the port forward:
+```sh
+upnpc -d 50122 tcp
+```
