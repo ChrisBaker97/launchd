@@ -25,5 +25,5 @@ $ brew install miniupnpc
 
 To bring down the UPnP port forwarding, first unload the daemon and then remove the port forward:
 ```sh
-$ sudo launchctl unload org.tuxfamily.miniupnp.upnpc.plist && upnpc -d 50122 tcp
+$ <sudo> launchctl unload <path/>org.tuxfamily.miniupnp.upnpc.plist && upnpc -d 50122 tcp
 ```
